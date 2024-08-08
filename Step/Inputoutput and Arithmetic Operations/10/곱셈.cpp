@@ -4,11 +4,12 @@ using namespace std;
 
 int main()
 {
-    int A, B, C;
-    cin >> A >> B >> C;
-    cout << (A+B)%C << endl;
-    cout << ((A%C) + (B%C))%C << endl;
-    cout << (A*B)%C << endl;
-    cout << ((A%C) * (B%C))%C << endl;
+    int a,b;
+    cin >> a;
+    cin >> b;
+    cout << a * (b%10) << endl;
+    cout << a * ( (b%100) / 10 ) << endl;
+    cout << a * ( (b%1000) / 100 ) << endl;   
+    cout << a * b << endl;
     return 0;
 }
