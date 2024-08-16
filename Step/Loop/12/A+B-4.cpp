@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int A, B;
+    while (cin >> A >> B) // EOF나 입력 오류가 발생하면
+    {
+        cout << A + B << '\n';
+    }
+    return 0;
+}
