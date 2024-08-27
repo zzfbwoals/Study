@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <cstring>
 
 using namespace std;
@@ -10,6 +11,8 @@ int main()
     for(int i=0; i<20; i++)
     {
         cin >> name >> credit >> grade;
+        if(strcmp(grade, "P") == 0)
+            continue; // P 등급은 계산에서 제외
         creditSum += credit;
         if(strcmp(grade, "A+") == 0)
             gradeSum += credit*4.5;
@@ -29,9 +32,8 @@ int main()
             gradeSum += credit*1.0;
         else if(strcmp(grade, "F") == 0)
             gradeSum += credit*0.0;
-        else
-            continue;
     }
-    cout << gradeSum/creditSum << endl;
+    cout << fixed << setprecision(6) << gradeSum / creditSum << endl;
+
     return 0;
 }
