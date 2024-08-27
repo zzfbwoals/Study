@@ -6,8 +6,8 @@ int main()
     int row, col;
     scanf("%d %d", &row, &col);
 
-    int **A = (int **)malloc(sizeof(int*) * row);
-    int **B = (int **)malloc(sizeof(int*) * row);
+    int **A = (int *)malloc(sizeof(int*) * row);
+    int **B = (int *)malloc(sizeof(int*) * row);
     for(int i = 0; i < row; i++)
     {
         A[i] = (int*)malloc(sizeof(int) * col);
