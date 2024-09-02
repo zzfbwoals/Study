@@ -6,7 +6,7 @@ int main()
 {
     int N, K;
     cin >> N >> K;
-    
+        
     // 약수의 개수와 약수 저장
     int count = 0;
     int *arr = new int[N]; // 최대 N개의 약수를 가질 수 있음
