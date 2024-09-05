@@ -39,3 +39,43 @@ int main()
     delete[] arr;
     return 0;
 }
+/*
+#include <iostream>
+#include <algorithm> // sort 함수를 사용하기 위해 포함
+
+using namespace std;
+
+int main()
+{
+    int N, M;
+    cin >> N >> M;
+    int *arr = new int[N];
+
+    for(int i = 0; i < N; i++)
+    {
+        int num;
+        cin >> num;
+        arr[i] = num;
+    }
+
+    // 배열 정렬
+    sort(arr, arr + N);
+
+    int sum = 0;
+    for(int i = 0; i < N; i++)
+    {
+        for(int j = i + 1; j < N; j++)
+        {
+            for(int l = j + 1; l < N; l++)
+            {
+                if(arr[i] + arr[j] + arr[l] <= M && arr[i] + arr[j] + arr[l] > sum)
+                    sum = arr[i] + arr[j] + arr[l];
+            }
+        }
+    }
+    cout << sum << endl;
+
+    delete[] arr;
+    return 0;
+}
+*/
