@@ -15,5 +15,6 @@ int main()
     int avg = sum / 5;
     int mid = arr[2];
     cout << avg << endl << mid << endl;
+    delete[] arr;
     return 0;
 }
