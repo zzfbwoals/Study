@@ -1,20 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void bubbleSort(int arr[], int N)
+void selectionSort(int arr[], int N)
 {
     for(int i = 0; i < N - 1; i++)
     {
-        for(int j = 0; j < N - 1 - i; j++)
+        int minIndex = i;
+        for(int j=i + 1; j<N; j++)
         {
-            if(arr[j] > arr[j + 1])
-            {
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
+            if(arr[j]<arr[minIndex])
+                minIndex = j;
         }
+        int temp = arr[minIndex];
+        arr[minIndex] = arr[i];
+        arr[i] = temp;
     }
+
 }
 
 int main()
@@ -34,8 +35,8 @@ int main()
         scanf("%d", &x[i]);
     }
 
-    // 버블 정렬 함수 호출
-    bubbleSort(x, N);
+    // 선택 정렬 함수 호출
+    selectionSort(x, N);
 
     printf("%d\n", x[N-k]);
 
