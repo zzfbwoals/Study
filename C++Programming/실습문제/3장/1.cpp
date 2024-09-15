@@ -12,11 +12,9 @@ class Tower {
 };
 
 // 备泅何
-Tower::Tower() {
-    height = 1;
-}
+Tower::Tower() : Tower(1) { } // 困烙积己磊
 
-Tower::Tower(int num) {
+Tower::Tower(int num) { // 鸥南积己磊
     height = num;
 }
 
