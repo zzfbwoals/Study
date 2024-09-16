@@ -8,27 +8,35 @@ using namespace std;
 // 비기는 경우 A-B==0
 // 이기는 경우 A-B==-2 || A-B==1
 // 지는   경우 A-B==-1 || A-B==2
-
-enum RSP {가위, 바위, 보};
+int reInt(string s)
+{
+    if(s=="가위")
+        return 0;
+    else if(s=="바위")
+        return 1;
+    else   
+        return 2;
+}
 
 int main()
 {
     string input1;
+    int num1;
     cout << "로미오>>";
     cin >> input1;
-    RSP s = static_cast<RSP>(input1);
+    num1 = reInt(input1);
 
     string input2;
+    int num2;
     cout << "줄리엣>>";
     cin >> input2;
-    RSP t = static_cast<RSP>(input2);
+    num2 = reInt(input2);
 
-    if(s - t == 0)
+    if(num1-num2==0)
         cout << "비겼습니다." << endl;
-    else if(s - t == -2 || s - t == 1)
+    else if(num1-num2==1 || num1-num2==-2)
         cout << "로미오가 이겼습니다." << endl;
     else
         cout << "줄리엣이 이겼습니다." << endl;
-    
     return 0;
 }
