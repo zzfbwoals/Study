@@ -9,11 +9,11 @@ class CoffeeMachine
         int sugar;
     public:
         CoffeeMachine(int x, int y, int z) {coffee = x, water = y, sugar = z;}
-        void show();
-        void fill();
-        void drinkEspresso();
-        void drinkAmericano();
-        void drinkSugarCoffee();
+        void show() {cout << "커피 머신 상태, 커피:" << coffee << " 물:" << water << " 설탕:" << sugar << endl;}
+        void fill() {coffee=10, water=10, sugar=10;}
+        void drinkEspresso() {coffee--; water--;}
+        void drinkAmericano() {coffee--; water-=2;}
+        void drinkSugarCoffee() {coffee--; water-=2; sugar--;}
 };
 
 int main()
