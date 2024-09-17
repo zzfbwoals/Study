@@ -10,4 +10,4 @@
 		int calculate() { return a * b; }
 	};
 
-	#endif MUL_H
+	#endif

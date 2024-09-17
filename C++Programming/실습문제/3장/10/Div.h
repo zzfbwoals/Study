@@ -10,4 +10,4 @@ public:
 	int calculate() { return a / b; }
 };
 
-#endif DIV_H
+#endif

@@ -18,4 +18,4 @@ public:
 	void show() { cout << "width = " << width << ", heigth = " << height << endl; }
 };
 
-#endif OVAL_H
+#endif

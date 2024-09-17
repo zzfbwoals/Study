@@ -10,4 +10,4 @@ public:
 	int calculate() { return a - b; }
 };
 
-#endif SUB_H
+#endif
