@@ -5,7 +5,7 @@ using namespace std;
 void run1()
 {
     int count = 0;
-    cout << "¹®ÀÚ¿­ ÀÔ·Â>> ";
+    cout << "ë¬¸ìì—´ ì…ë ¥>> ";
     string str;
     getline(cin, str);
     for(int i=0; i<str.length(); i++)
@@ -13,13 +13,13 @@ void run1()
         if(str[i]=='a')
             count++;
     }
-    cout << "¹®ÀÚ a´Â " << count << "°³ ÀÖ½À´Ï´Ù." << endl;
+    cout << "ë¬¸ì aëŠ” " << count << "ê°œ ìˆìŠµë‹ˆë‹¤." << endl;
 }
 
 void run2()
 {
     int count = 0; int index = 0;
-    cout << "¹®ÀÚ¿­ ÀÔ·Â>> ";
+    cout << "ë¬¸ìì—´ ì…ë ¥>> ";
     string str;
     getline(cin, str);
     while(true)
@@ -32,7 +32,7 @@ void run2()
             count++; index++;
         }
     }
-    cout << "¹®ÀÚ a´Â " << count << "°³ ÀÖ½À´Ï´Ù." << endl;    
+    cout << "ë¬¸ì aëŠ” " << count << "ê°œ ìˆìŠµë‹ˆë‹¤." << endl;    
 }
 
 int main()

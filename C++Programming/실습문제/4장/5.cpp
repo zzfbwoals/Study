@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     srand((unsigned)time(0));
-    cout << "¾Æ·¡¿¡ ÇÑ ÁÙÀ» ÀÔ·ÂÇÏ¼¼¿ä.(exit¸¦ ÀÔ·ÂÇÏ¸é Á¾·áÇÕ´Ï´Ù)" << endl;
+    cout << "ì•„ë˜ì— í•œ ì¤„ì„ ì…ë ¥í•˜ì„¸ìš”.(exitë¥¼ ì…ë ¥í•˜ë©´ ì¢…ë£Œí•©ë‹ˆë‹¤)" << endl;
     while(true)
     {
         cout << ">>";
@@ -18,9 +18,9 @@ int main()
         int index = rand() % text.length();
         int randomChar;
         if (rand() % 2 == 0) {
-            randomChar = rand() % 26 + 65; // AºÎÅÍ Z±îÁöÀÇ ·£´ıÇÑ ´ë¹®ÀÚ
+            randomChar = rand() % 26 + 65; // Aë¶€í„° Zê¹Œì§€ì˜ ëœë¤í•œ ëŒ€ë¬¸ì
         } else {
-            randomChar = rand() % 26 + 97; // aºÎÅÍ z±îÁöÀÇ ·£´ıÇÑ ¼Ò¹®ÀÚ
+            randomChar = rand() % 26 + 97; // aë¶€í„° zê¹Œì§€ì˜ ëœë¤í•œ ì†Œë¬¸ì
         }
         text[index] = randomChar;
         cout << text << endl;

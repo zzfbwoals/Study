@@ -5,13 +5,13 @@ int main()
 {
     int *arr = new int [5];
     int sum=0;
-    cout << "Á¤¼ö 5°³ ÀÔ·Â>> ";
+    cout << "ì •ìˆ˜ 5ê°œ ì…ë ¥>> ";
     for(int i=0; i<5; i++)
     {
         cin >> arr[i];
         sum += arr[i];
     }
-    cout << "Æò±Õ " << (double)sum/5.0;
+    cout << "í‰ê·  " << (double)sum/5.0;
     delete [] arr;
     return 0;
 }
