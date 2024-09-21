@@ -1,5 +1,5 @@
 /*
-<Enter> Å°°¡ ÀÔ·ÂµÉ ¶§±îÁö ¹®ÀÚµéÀ» ÀÐ°í, ÀÔ·ÂµÈ ¹®ÀÚ 'x'ÀÇ °³¼ö¸¦ È­¸é¿¡ Ãâ·ÂÇÏ¶ó.
+<Enter> í‚¤ê°€ ìž…ë ¥ë  ë•Œê¹Œì§€ ë¬¸ìžë“¤ì„ ì½ê³ , ìž…ë ¥ëœ ë¬¸ìž 'x'ì˜ ê°œìˆ˜ë¥¼ í™”ë©´ì— ì¶œë ¥í•˜ë¼.
 */
 #include <iostream>
 #include <cstring>
@@ -7,7 +7,7 @@ using namespace std;
 
 void run()
 {
-    cout << "¹®ÀÚµéÀ» ÀÔ·ÂÇÏ¶ó(100°³ ¹Ì¸¸)." << endl;
+    cout << "ë¬¸ìžë“¤ì„ ìž…ë ¥í•˜ë¼(100ê°œ ë¯¸ë§Œ)." << endl;
     char str[100];
     int count = 0;
     cin.getline(str, 100, '\n');
@@ -16,7 +16,7 @@ void run()
         if(str[i]=='x')
             count ++;
     }
-    cout << "xÀÇ °³¼ö´Â " << count << endl;
+    cout << "xì˜ ê°œìˆ˜ëŠ” " << count << endl;
 }
 
 int main()

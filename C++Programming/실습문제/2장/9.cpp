@@ -1,5 +1,5 @@
 /*
-ÀÌ¸§, ÁÖ¼Ò, ³ªÀÌ¸¦ ÀÔ·Â¹Ş¾Æ ´Ù½Ã Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó.
+ì´ë¦„, ì£¼ì†Œ, ë‚˜ì´ë¥¼ ì…ë ¥ë°›ì•„ ë‹¤ì‹œ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ë¼.
 */
 #include <iostream>
 #include <string>
@@ -9,13 +9,13 @@ void run()
 {
     char name[100], address[100];
     int age;
-    cout << "ÀÌ¸§Àº?";
+    cout << "ì´ë¦„ì€?";
     cin.getline(name, 100, '\n');
-    cout << "ÁÖ¼Ò?";
+    cout << "ì£¼ì†Œ?";
     cin.getline(address, 100, '\n');
-    cout << "³ªÀÌ´Â?";
+    cout << "ë‚˜ì´ëŠ”?";
     cin >> age;
-    cout << name << ", " << address << ", " << age << "¼¼" << endl;
+    cout << name << ", " << address << ", " << age << "ì„¸" << endl;
 }
 
 int main()

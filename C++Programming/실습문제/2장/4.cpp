@@ -1,5 +1,5 @@
 /*
-¼Ò¼öÁ¡À» °¡Áö´Â 5°³ÀÇ ½Ç¼ö¸¦ ÀÔ·Â ¹Ş¾Æ Á¦ÀÏ Å« ¼ö¸¦ È­¸é¿¡ Ãâ·ÂÇÏ¶ó.
+ì†Œìˆ˜ì ì„ ê°€ì§€ëŠ” 5ê°œì˜ ì‹¤ìˆ˜ë¥¼ ì…ë ¥ ë°›ì•„ ì œì¼ í° ìˆ˜ë¥¼ í™”ë©´ì— ì¶œë ¥í•˜ë¼.
 */
 #include <iostream>
 using namespace std;
@@ -7,7 +7,7 @@ using namespace std;
 void run()
 {
     double max = -DBL_MAX;
-    cout << "5 °³ÀÇ ½Ç¼ö¸¦ ÀÔ·ÂÇÏ¶ó>>";
+    cout << "5 ê°œì˜ ì‹¤ìˆ˜ë¥¼ ì…ë ¥í•˜ë¼>>";
     for(int i=0; i<5; i++)
     {
         double num;
@@ -15,7 +15,7 @@ void run()
         if(num > max)
             max = num;
     }
-    cout << "Á¦ÀÏ Å« ¼ö = " << max << endl;
+    cout << "ì œì¼ í° ìˆ˜ = " << max << endl;
 }
 
 int main()

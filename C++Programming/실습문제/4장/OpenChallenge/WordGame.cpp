@@ -5,37 +5,37 @@ using namespace std;
 
 void WordGame::run()
 {
-	cout << "³¡¸» ÀÕ±â °ÔÀÓÀ» ½ÃÀÛÇÕ´Ï´Ù" << endl << "°ÔÀÓ¿¡ Âü°¡ÇÏ´Â ÀÎ¿øÀº ¸î¸íÀÔ´Ï±î?";
+	cout << "ëë§ ì‡ê¸° ê²Œì„ì„ ì‹œì‘í•©ë‹ˆë‹¤" << endl << "ê²Œì„ì— ì°¸ê°€í•˜ëŠ” ì¸ì›ì€ ëª‡ëª…ì…ë‹ˆê¹Œ?";
 	int num;
 	cin >> num;
-	// ÇÃ·¹ÀÌ¾î ¼³Á¤
+	// í”Œë ˆì´ì–´ ì„¤ì •
 	Player* p = new Player[num];
 	for (int i = 0; i < num; i++)
 	{
-		cout << "Âü°¡ÀÚÀÇ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä. ºóÄ­ ¾øÀÌ>>";
+		cout << "ì°¸ê°€ìì˜ ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”. ë¹ˆì¹¸ ì—†ì´>>";
 		string name;
 		cin >> name;
 		(p + i)->setName(name);
 	}
-	// ³¡¸»ÀÕ±â ½ÃÀÛ
-	cout << "½ÃÀÛÇÏ´Â ´Ü¾î´Â ¾Æ¹öÁöÀÔ´Ï´Ù" << endl;
-	string a = "¾Æ¹öÁö";
+	// ëë§ì‡ê¸° ì‹œì‘
+	cout << "ì‹œì‘í•˜ëŠ” ë‹¨ì–´ëŠ” ì•„ë²„ì§€ì…ë‹ˆë‹¤" << endl;
+	string a = "ì•„ë²„ì§€";
 	string b;
 	while (true)
 	{
-		bool end = false; // Æ²·È³ª ¾ÈÆ²·È³ª
+		bool end = false; // í‹€ë ¸ë‚˜ ì•ˆí‹€ë ¸ë‚˜
 		for (int i = 0; i < num; i++)
 		{
 			cout << (p + i)->getName() << ">>";
 			cin >> b;
 			int aSize = a.size();
-			if (a.at(aSize - 2) == b.at(0) && a.at(aSize - 1) == b.at(1)) // ³¡¸»ÀÕ±â ¼º°ø
+			if (a.at(aSize - 2) == b.at(0) && a.at(aSize - 1) == b.at(1)) // ëë§ì‡ê¸° ì„±ê³µ
 			{
 				a = b;
 			}
-			else // ³¡¸»ÀÕ±â ½ÇÆĞ
+			else // ëë§ì‡ê¸° ì‹¤íŒ¨
 			{
-				cout << "½ÇÆĞ!!" << endl << "°ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù ..." << endl;
+				cout << "ì‹¤íŒ¨!!" << endl << "ê²Œì„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤ ..." << endl;
 				end = true;
 				break;
 			}

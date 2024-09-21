@@ -1,5 +1,5 @@
 /*
-¹®ÀÚ¿­À» µÎ °³ ÀÔ·Â¹Þ°í µÎ °³ÀÇ ¹®ÀÚ¿­ÀÌ °°ÀºÁö °Ë»çÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó. ¸¸ÀÏ °°À¸¸é "°°½À´Ï´Ù", ¾Æ´Ï¸é "°°Áö ¾Ê½À´Ï´Ù"¸¦ Ãâ·ÂÇÏ¶ó.
+ë¬¸ìžì—´ì„ ë‘ ê°œ ìž…ë ¥ë°›ê³  ë‘ ê°œì˜ ë¬¸ìžì—´ì´ ê°™ì€ì§€ ê²€ì‚¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ë¼. ë§Œì¼ ê°™ìœ¼ë©´ "ê°™ìŠµë‹ˆë‹¤", ì•„ë‹ˆë©´ "ê°™ì§€ ì•ŠìŠµë‹ˆë‹¤"ë¥¼ ì¶œë ¥í•˜ë¼.
 */
 #include <iostream>
 #include <string>
@@ -8,14 +8,14 @@ using namespace std;
 void run()
 {
     string a, b;
-    cout << "»õ ¾ÏÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä>>";
+    cout << "ìƒˆ ì•”í˜¸ë¥¼ ìž…ë ¥í•˜ì„¸ìš”>>";
     cin >> a;
-    cout << "»õ ¾ÏÈ£¸¦ ´Ù½Ã ÇÑ ¹ø ÀÔ·ÂÇÏ¼¼¿ä>>";
+    cout << "ìƒˆ ì•”í˜¸ë¥¼ ë‹¤ì‹œ í•œ ë²ˆ ìž…ë ¥í•˜ì„¸ìš”>>";
     cin >> b;
     if(a == b)
-        cout << "°°½À´Ï´Ù" << endl;
+        cout << "ê°™ìŠµë‹ˆë‹¤" << endl;
     else
-        cout << "°°Áö ¾Ê½À´Ï´Ù" << endl;
+        cout << "ê°™ì§€ ì•ŠìŠµë‹ˆë‹¤" << endl;
 }
 
 int main()

@@ -51,6 +51,10 @@
         "xutility": "cpp",
         "stdio.h": "c",
         "string": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "optional": "cpp",
+        "random": "cpp",
+        "sstream": "cpp",
+        "vector": "cpp"
     }
 }

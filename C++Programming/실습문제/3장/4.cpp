@@ -9,7 +9,7 @@ class CoffeeMachine
         int sugar;
     public:
         CoffeeMachine(int x, int y, int z) {coffee = x, water = y, sugar = z;}
-        void show() {cout << "Ä¿ÇÇ ¸Ó½Å »óÅÂ, Ä¿ÇÇ:" << coffee << " ¹°:" << water << " ¼³ÅÁ:" << sugar << endl;}
+        void show() {cout << "ì»¤í”¼ ë¨¸ì‹  ìƒíƒœ, ì»¤í”¼:" << coffee << " ë¬¼:" << water << " ì„¤íƒ•:" << sugar << endl;}
         void fill() {coffee=10, water=10, sugar=10;}
         void drinkEspresso() {coffee--; water--;}
         void drinkAmericano() {coffee--; water-=2;}

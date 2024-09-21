@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// ¼±¾ğºÎ
+// ì„ ì–¸ë¶€
 class Tower {
     private:
         int height;
@@ -11,10 +11,10 @@ class Tower {
         int getHeight();
 };
 
-// ±¸ÇöºÎ
-Tower::Tower() : Tower(1) { } // À§ÀÓ»ı¼ºÀÚ
+// êµ¬í˜„ë¶€
+Tower::Tower() : Tower(1) { } // ìœ„ì„ìƒì„±ì
 
-Tower::Tower(int num) { // Å¸ÄÏ»ı¼ºÀÚ
+Tower::Tower(int num) { // íƒ€ì¼“ìƒì„±ì
     height = num;
 }
 
@@ -22,12 +22,12 @@ int Tower::getHeight() {
     return height;
 }
 
-// ¸ŞÀÎÇÔ¼ö
+// ë©”ì¸í•¨ìˆ˜
 int main()
 {
     Tower myTower;
     Tower seoulTower(100);
-    cout << "³ôÀÌ´Â " << myTower.getHeight() << "¹ÌÅÍ" << endl;
-    cout << "³ôÀÌ´Â " << seoulTower.getHeight() << "¹ÌÅÍ" << endl;
+    cout << "ë†’ì´ëŠ” " << myTower.getHeight() << "ë¯¸í„°" << endl;
+    cout << "ë†’ì´ëŠ” " << seoulTower.getHeight() << "ë¯¸í„°" << endl;
     return 0;
 }
