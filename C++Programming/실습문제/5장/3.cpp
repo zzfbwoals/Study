@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-void combine(string a, string b, string &c)
+void combine(string a, string b, string& c)
 {
     c = a + " " + b;
 }

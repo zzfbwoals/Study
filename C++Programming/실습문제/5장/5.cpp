@@ -10,7 +10,7 @@ public:
     void show() { cout << "반지름이 " << radius << "인 원" << endl; } // const 멤버 함수
 };
 
-void increaseBy(Circle &a, Circle &b) { // const 참조 사용
+void increaseBy(Circle& a, Circle& b) { // const 참조 사용
     int r = a.getRadius() + b.getRadius();
     a.setRadius(r);
 }

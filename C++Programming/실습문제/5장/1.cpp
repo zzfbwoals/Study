@@ -10,7 +10,7 @@ public:
     int getRadius() { return radius; }
 };
 
-void swap(Circle &a, Circle &b)
+void swap(Circle& a, Circle& b)
 {
     Circle temp;
     temp = a;

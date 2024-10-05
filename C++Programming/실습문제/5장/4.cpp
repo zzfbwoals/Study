@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-bool bigger(int a, int b, int &big)
+bool bigger(int a, int b, int& big)
 {
     if(a==b)
         return true;

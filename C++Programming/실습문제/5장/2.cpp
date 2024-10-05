@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void half(double &n)
+void half(double& n)
 {
     n /= 2;
 }
