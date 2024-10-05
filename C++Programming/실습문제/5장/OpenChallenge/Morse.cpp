@@ -97,8 +97,8 @@ bool Morse::morse2Text(string morse, string& text)
 	// 모스 부호 문자열을 끝까지 순회 (마지막 문자 처리를 위해 length() + 1 만큼 반복)
 	for (int i = 0; i <= morse.length(); i++)
 	{
-		// 문자열의 끝에 도달했거나 현재 문자가 공백인 경우
-		if (i == morse.length() || morse[i] == ' ')
+		// 현재 문자가 공백인 경우
+		if (morse[i] == ' ')
 		{
 			// 누적된 모스 부호가 있으면 해독
 			if (!temp.empty())
@@ -143,9 +143,6 @@ bool Morse::morse2Text(string morse, string& text)
 
 				temp = "";  // 임시 문자열 초기화
 			}
-
-			// 문자열의 끝에 도달한 경우 루프 종료
-			if (i == morse.length()) break;
 
 			spaceCount++;  // 공백 개수 증가
 
