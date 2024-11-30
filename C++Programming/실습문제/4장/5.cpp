@@ -19,8 +19,10 @@ int main()
         int randomChar;
         if (rand() % 2 == 0) {
             randomChar = rand() % 26 + 65; // A부터 Z까지의 랜덤한 대문자
+            // randomChar = rand() % 26 + 'A'; 
         } else {
             randomChar = rand() % 26 + 97; // a부터 z까지의 랜덤한 소문자
+            // randomChar = rand() % 26 + 'a';
         }
         text[index] = randomChar;
         cout << text << endl;
