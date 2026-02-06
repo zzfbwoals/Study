@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.StringTokenizer;
 
-// 평균 구하기
+// 평균 구하기 (1546)
 public class Main_04_002 { 
     public static void main(String[] args) throws Exception{
         // 과목 개수 N 입력받기

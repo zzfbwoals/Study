@@ -1,6 +1,6 @@
 import java.io.*;
 
-// 숫자의 합 구하기
+// 숫자의 합 구하기 (11720)
 public class Main_04_001 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
