@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeConversion</title>
+</head>
+<body>
+    <h1>hello TypeConversion!</h1>
+</body>
+</html>
+<script>
+    let engScore = prompt("영어 몇점?");
+    let korScore = prompt("국어 몇점?");
+    console.log( ( engScore + korScore) /2 );
+    /* 
+    prompt 로 입력 받은 경우 문자형이기 떄문에 숫자형으로 변환 후 연산 필요.
+
+    "90" + "80" 하면 "9080"이 된다. 즉 위의 연산은 "9080"/2 가 되는 것이다.
+
+    이때 "9080"/2 는 문자형과 숫자형인데 연산이 되는 이유는 /와 같은 표현식은 숫자형으로 자동으로 변환돼서 연산된다.
+
+    "6"/"2"=3 자동 형변환
+    하지만 항상 의도를 가지고 원하는 타입으로 변환해줘야 원인을 찾기 힘든 에러를 방지할 수 있다. 즉, 명시적 형변환을 해주자.
+    */
+
+
+    // String() -> 문자형 변환
+    console.log(typeof String(3));
+
+
+    // Number() -> 숫자형 변환
+    console.log( ( Number(engScore) + Number(korScore) ) /2 );
+    console.log( Number("123번") ); // 문자형 안에 숫자가 아닌 문자가 있으면 NaN이 됨으로 주의 
+    Number(true); // 1
+    Number(false); // 0
+    Number(null); // 0
+    Number(undefined); // NaN
+
+
+    // Boolean() -> 불린형 변환
+    Boolean(0); // false
+    Boolean('0'); // true
+    Boolean(""); // false
+    Boolean(" "); // true
+    Boolean(null); // false
+    Boolean(undefined); // false
+    Boolean(NaN); // false
+
+</script>

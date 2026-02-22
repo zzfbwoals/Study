@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataType</title>
+</head>
+<body>
+    <h1>hello DataType!</h1>
+</body>
+</html>
+<script>
+    // 문자형 작성 3가지 방식
+    let name1 = "fbwoals";
+    let name2 = 'fbwoals';
+    let name3 = `fbwoals`;
+
+    let message1 = "I'm a boy."; // 작은 따옴표 사용해야할 경우 큰따옴표가 편리
+    let message2 = 'I\'m a boy.'; // 굳이 작은 따옴표 사용 시
+    let message3 = `My name is ${name1}`; // 백틱은 문자열 안에 변수 사용 가능
+    let message4 = `나는 ${20+5} 살 입니다.`; // 바로 표현식도 가능
+    
+    console.log(message1 + " " + name1); // 문자형 더하기 가능
+
+    // 숫자형
+    let age = 30;
+    const PI = 3.14;
+    console.log(1/0); // 무한대
+    console.log(name1/2); // NaN(Not a Number) 숫자와 관련된 작업을 할 때 항상 NaN 확인
+
+
+    // Boolean
+    let a = true;
+    let b = false;
+
+    
+    // null 과 undefined
+    let num; // undefined
+    let user = null; // null 은 객체가 아님
+
+
+    // typeof 연산자
+    console.log(typeof 3);
+    console.log(typeof name1);
+    console.log(typeof true);
+    console.log(typeof message1);
+    console.log(typeof null);
+    console.log(typeof num);
+</script>
