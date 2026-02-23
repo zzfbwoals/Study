@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator</title>
+</head>
+<body>
+    <h1>hello Operator!</h1>
+</body>
+</html>
+<script>
+    console.log(2**3); // 2의 3승
+    // 우선순위 */ > +-
+
+
+    // 연산자 줄여쓰기
+    let num = 10;
+    num += 10; // -=, +=, *=, /=, %=
+
+
+    // 증가 연산자, 감소 연산자
+    num++;
+    ++num;
+    num--;
+    --num;
+
+
+    // 비교 연산자 < > <= >= == != ===(타입까지 비교, 일치 연산자)
+    console.log(1=="1");
+    console.log(1==="1"); // 일치 연산자 되도록 일치 연산자 사용
+
+
+    // 논리 연산자 || && !
+    /* 
+    첫번째 논리 조건에서 걸러지면 그 뒤에 것은 읽지도 않기 때문에 조건 순서가 중요하다.
+    예를 들어 운전면허(80%)가 있고 시력(60%)이 좋은 여군(7%) 의 조건을
+    -> 여군인데 시력이 좋고 운전면허가 있는 사람 순서로 조건을 걸면
+    여군에서 93퍼를 거를 수 있어서 성능 최적화가 된다.
+    */
+</script>
