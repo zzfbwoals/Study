@@ -15,6 +15,7 @@
     // let name = "fbwoals"; --> 앞에서 이미 name 변수명을 사용중이어서 에러 발생
 
     const PI = 3.14; // const는 상수 (파이, 최소/최대값 등등) 변수명은 대문자로 선언해서 해당 변수가 상수인걸 알리자.
+    // 선언과 동시에 할당하지 않으면 에러 발생
 
     age = 25
 
@@ -27,4 +28,14 @@
     변하지 않는 값은 const,
     변할 수 있는 값은 let 으로 선언
     */
+
+    /*
+    var는 한번 선언된 변수를 다시 선언할 수 있다.
+    var는 선언하기 전에 사용할 수 있다. (호이스팅)
+    let과 const도 호이스팅은 되지만 Temporal Dead Zone(TDZ)에 의해 사용할 수 없다. -> 코드 예측과 잠재적 버그 방지
+    var는 함수스코프(function), let과 const는 블록스코프(function, if, for 등)
+    */ 
+    var name2;
+    console.log(name2); // undefined -> 선언은 호이스팅 되지만 할당은 호이스팅이 되지 않기 때문.
+    name2 = "류재민"; // 할당
 </script>
