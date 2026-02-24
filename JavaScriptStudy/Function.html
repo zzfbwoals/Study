@@ -10,12 +10,67 @@
 </body>
 </html>
 <script>
-    function hello(name) {
-        console.log(name);
+    // 함수 선언문
+
+    // 매개변수 O
+    function hello(name = "user") {
+        console.log(name); // 디폴트가 없으면 undefined
         if(name) {
             console.log(`Hello, ${name}`);
         }
         console.log("Hello");
     }
     hello();
+
+
+    // 매개변수 X
+    function error() {
+        console.log("에러 발생");
+    }
+    error();
+
+
+    // 전역변수와 지역변수
+    let msg = "welcome"; // 전역변수
+    console.log(msg);
+    function welcome() {
+        let msg = "재민"; // 지역변수
+        console.log(msg);
+    }
+    welcome();
+    console.log(msg);
+
+    
+    // return 반환, return이 없거나 return 뒤에 뭐가 없으면 undefined 반환, return 다음 행의 코드들은 절대 실행X
+    function add(a, b) {
+        return a+b;
+    }
+    console.log(add(1, 2));
+
+
+    /*
+    (정리)
+    한번에 한작업에 집중
+    읽기 쉽고 어떤 동작인지 알 수 있게 네이밍
+    */
+
+
+    // 함수 표현식
+    // 함수 표현식은 함수 선언문과 달리 표현식이 무조건 위에 있어야 함수를 사용할 수 있음.
+    // 함수 선언문은 함수를 먼저 실행하고 밑에서 선언(정의)해도 사용 가능 -> 초기화 단계에서 함수를 미리 생성해놓기 때문 (호이스팅)
+    // 즉, 함수 선언문이 더 자유롭기 때문에 웬만하면 함수 선언문 사용
+    let sayHello = function() {
+        console.log("Hello");
+    }
+    sayHello();
+
+
+    // 화살표 함수
+    // 화살표 함수는 일반 함수와는 달리 자신만의 this를 가지지 않는다.
+    let add2 = (a, b) => {
+        return a+b;
+    }
+    let add3 = (a, b) => (a + b); // 리턴문이 없다면 이렇게 가능, 괄호도 생략 가능
+    console.log(add2(2,3)); 
+    console.log(add3(3,4)); 
 </script>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <h1>hello Object!</h1>
+</body>
+</html>
+<script>
+    /*
+    객체는 중괄호 안에 키와 값으로 구성 되어 있다.
+    접근 혹은 추가할때는 .이나 []를 사용하여 접근할 수 있다.
+    삭제는 앞에 delete만 붙이면 된다.
+    존재하지 않는 프로퍼티에 접근할 경우 에러대신 undefined가 발생한다.
+    in 연산자를 사용하여 프로퍼티가 있는지 확인할 수 있다. ex) 'age' in jaemin
+    */
+    const jaemin = {
+        name : '류재민',
+        age : 25,
+        fly(){
+            console.log(`나는 ${this.name} 입니다.`)
+        }
+    };
+    console.log(jaemin.age);
+    console.log(jaemin['name']);
+    jaemin.fly();
+    
+    jaemin.gender = '남자';
+    console.log(jaemin.gender);
+
+    delete jaemin.gender;
+    console.log(jaemin.gender);
+    console.log('gender' in jaemin);
+    console.log(jaemin);
+    console.log("================================");
+
+    // 객체 생성 함수
+    function makeObj(name, age) {
+        return {
+            name : name,
+            age : age,
+        }
+    }
+    const mingyeong = makeObj("김민경", 26);
+    console.log(mingyeong);
+    console.log("================================");
+    
+    // in 연산자 사례
+    function isAdult(user) {
+        if(!('age' in user) || user.age<20) { // in 연산자 조건이 없으면 객체에 age가 없는 경우 undefined로 항상 false가 돼서 조건문에 걸리지 않는다. 즉, age 라는 프로퍼티가 있는지도 확인해야한다.
+            return false;
+        }
+        return true;
+    }
+    const Mike = {
+        name : "마이크",
+        age : 30,
+    };
+    const Jane = {
+        name : "제인",
+    };
+    console.log(isAdult(Mike));
+    console.log(isAdult(Jane));
+    console.log("================================");
+
+    // 객체 for ... in
+    for (i in jaemin) {
+        console.log(i); // jaemin 이라는 객체가 가진 key 값을 출력한다.
+        console.log(jaemin[i]); // jamein['name'], jaemin['age']가 순서대로 출력된다.
+    }
+
+    
+    // this
+    let boy = {
+        name : "보이",
+        showName : function() { // 객체 메소드는 화살표 함수를 사용하면 안됨. this가 전역을 가리키게 됨.
+            console.log(boy.name); // this.name으로 해야함.
+        }
+    };
+    let man = boy;
+    boy = null;
+    man.showName(); // 에러발생 boy가 null이 됐는데 함수 선언을 boy.name으로 해서 this.name으로 고쳐야 제대로 나옴
+</script>

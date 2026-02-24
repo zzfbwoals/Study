@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>hello Array!</h1>
+</body>
+</html>
+<script>
+    let couple = ["재민", "민경"];
+    console.log(couple.length); // 배열 길이
+
+    // 스택
+    couple.push("스택"); // 배열 끝에 추가 (여러 개 가능)
+    couple.pop(); // 배열 끝 제거
+
+    // 큐
+    couple.unshift("큐"); // 배열 앞에 추가 (여러 개 가능)
+    couple.shift(); // 배열 앞에 제거
+
+    // for of
+    for (let i = 0; i<couple.length; i++) {
+        console.log(couple[i]);
+    }
+    for (let i of couple) {
+        console.log(i);
+    }
+
+
+    // 배열은 문자 뿐만 아니라, 숫자, 객체, 함수 등도 포함할 수 있다.
+    let arr = [
+        "민수",
+        3,
+        false,
+        {
+            name : "재민",
+            age : 25,
+        },
+        function() {
+            console.log("메롱");
+        }
+    ];
+</script>
