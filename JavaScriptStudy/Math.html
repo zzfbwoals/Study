@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+<body>
+    <h1>hello Math!</h1>
+</body>
+</html>
+<script>
+    // toString()
+    
+    // 10진수 -> 2진수/16진수
+    let num = 10;
+    num.toString(); // "10"
+    num.toString(2); // "1010"
+    String(num);
+
+    // Math.PI;
+    console.log(Math.PI);
+
+    // Math.ceil() : 올림
+    // Math.floor() : 내림
+    // Math.round() : 반올림
+
+    // 소수점 자릿수
+    let userRate = 30.1234; // 이를 소수점 둘째자리 까지 표현 (셋째 자리에서 반올림)
+    console.log(Math.round(userRate*100)/100);
+    // toFixed() -> 문자열로 반환함
+    console.log(userRate.toFixed(2)); // 훨씬 간단한 방법
+    console.log(userRate.toFixed(0)); // 소수점 X
+    console.log(userRate.toFixed(6)); // 나머지는 0으로 채워짐
+
+    // isNaN()
+    let x = Number('x'); // NaN
+    console.log(x == NaN); // false
+    console.log(x === NaN); // false
+    console.log(NaN == NaN); // false
+    console.log(isNaN(x)); // true
+    console.log(isNaN(3)); // false
+
+    // parseInt()
+    let margin = '10px';
+    console.log(parseInt(margin)); // 10
+    console.log(Number(margin)); // NaN
+
+    let redColor = 'f3';
+    console.log(parseInt(redColor)); // NaN
+    console.log(parseInt(redColor, 16)); // 243 -> redColor는 16진수로 표현된 것이며 이를 10진수로 바꿔줘.
+    console.log(parseInt(101, 2)); // 101의 2진수를 10진수로 바꿔줘.
+
+    // parseFloat()
+    let padding = '18.5%';
+    console.log(parseInt(padding)); // 18
+    console.log(parseFloat(padding)); // 18.5
+
+    // Math.random() 0~1 의 랜덤 수
+    console.log(Math.floor(Math.random()*100)+1); // 1~100 사이의 난수
+
+    // Math.max() / Math.min()
+    console.log(Math.max(1,2,3,4,5,6));
+    console.log(Math.min(1,2,3,4,5,6));
+
+    // Math.abs() : 절대값
+    console.log(Math.abs(-123));
+
+    // Math.pow(n, m) : n의 m제곱
+    console.log(Math.pow(2, 10));
+
+    // Math.sqrt() : 제곱근
+    console.log(Math.sqrt(16));
+</script>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol</title>
+</head>
+<body>
+    <h1>hello Symbol!</h1>
+</body>
+</html>
+<script>
+    /*
+    심볼은 유일성 보장
+    */
+    const a = Symbol();
+    const b = Symbol();
+    console.log(a);
+    console.log(a==b); // 타입 무시한 동등도 false로 나옴
+    console.log(a===b);
+
+    const id = Symbol('id');
+    const user = {
+        name : "재민",
+        age : 25,
+        [id] : "재민id",
+    };
+    console.log(user);
+    console.log(id.description); // id 심볼의 키를 알려줌
+
+    // Sysbol.for() : 전역심볼 그냥 Symbol은 매번 다른 Symbol을 만들지만 Symbol.for 사용하면 키가 같은 Symbol을 공유
+    const num1 = Symbol.for('num');
+    const num2 = Symbol.for('num');
+    console.log(num1==num2);
+    console.log(num1===num2);
+    console.log(Symbol.keyFor(num2)); // 심볼의 키를 알려줌
+
+
+    // 실제 사용 예시
+    
+    // 다른 개발자가 만들어 놓은 객체
+    const user2 = {
+        name: '재민',
+        age: 25,
+    };
+
+    // 내가 작업
+    user2.showName = function() {return this.name;};
+
+    // 사용자가 접속하면 보는 메시지
+    for (let key in user2) {
+        console.log(`His ${key} is ${user2[key]}`)
+    } // 함수까지 출력되는 문제 발생!! -> 메소드를 심볼로 추가해서 해결
+
+    delete user2.showName;
+    
+    const showName = Symbol("show name");
+    user2[showName] = function () {console.log(this.name);};
+    for (let key in user2) {
+        console.log(`His ${key} is ${user2[key]}`)
+    } // 심볼로 메소드 선언해서 위의 반복문에서 메소드는 안나옴
+    user2[showName]();
+    console.log(user2)
+</script>

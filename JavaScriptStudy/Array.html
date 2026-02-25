@@ -43,4 +43,72 @@
             console.log("메롱");
         }
     ];
+
+
+    // Methods
+     
+    // arr.splice(n, m) : 인덱스 n부터 m까지 지움
+    // arr.splice(n, m, x) : 인덱스 n부터 m까지 지우고 x를 추가 여러개 가능
+    // arr.splice() : 삭제된 요소 반환 -> 삭제된 요소를 새로운 변수에 저장 할 수 있음
+
+    // arr.slice(n, m) : 인덱스 n부터 m 앞까지 반환, n/m이 없으면 복사
+
+    // arr.concat(arr2, arr3 ...) : arr2, arr3 합쳐서 새로운 배열 반환
+
+    // forEach
+    let arr2 = ["재민", "민경"];
+    arr2.forEach((name, index) => {
+        console.log(`${index+1}: ${name}`);
+    });
+
+    // arr.indexOf / arr.lastIndexOf
+    let arr3 = [1,2,3,4,5,3];
+    arr.indexOf(3); // 2
+    arr.indexOf(3,3); // 5 -> 인덱스 3 부터 찾음
+
+    // arr.includes() : 포함하는지 확인
+
+    // arr.find(fn) / arr.findIndex(fn) : 함수를 매개변수로 넣을 수 있다. 첫번째 true 값만 반환하고 끝. 없으면 undefined
+    const result = arr3.find((num)=>{
+        return num % 2 ===0;
+    });
+    console.log(result); // 짝수를 찾으면 해당 요소 반환하고 멈춤
+
+    // arr.filter(fn) : 만족하는 모든 요소를 배열로 반환 -> find와 다르게 모두 반환해줌
+
+    // arr.reverse() : 역순으로 재정렬
+
+    // arr.map(fn) : 함수를 받아 특정 기능을 시행하고 새로운 배열을 반환 -> 실무에서 많이 사용
+    let userList = [
+        {name : "재민", gender : "남자"},
+        {name : "민경", gender : "여자"}
+    ];
+    let newUserList = userList.map((user, index) => {
+        return Object.assign({}, user, {isMale: user.gender==="남자"});
+    });
+    console.log(newUserList);
+
+    // join, split
+    let hi = ["만나서", "반가워"];
+    let result2 = hi.join(" "); // join() 인수가 없으면 ,가 기본 " " 으로 하면 공백으로 합쳐짐
+    console.log(result2);
+
+    let result3 = result2.split(" "); // 공백을 기준으로 문자열을 배열로 나눔
+    console.log(result3);
+
+    // Array.isArray() 배열인지 확인 -> typeof는 객체로 반환해주기 때문에 따로 이 함수를 사용
+
+    // arr.sort() 배열 재정렬 -> Lodash 라이브러리를 사용하면 밑에처럼 복잡하게 함수 안 작성해도 된다.
+    let arr4 = [27, 8, 5, 13];
+    // 8, 27, 5, 13
+    // 5, 8, 27, 13
+    // 5, 8, 13, 27
+    arr4.sort((a, b) => {
+        console.log(a, b);
+        return a-b;
+    });
+    console.log(arr4);
+
+    //
+
 </script>
