@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    <h1>hello Inheritance!</h1>
+</body>
+</html>
+<script>
+    const car = {
+        whieels: 4,
+        drive() {
+            console.log('부릉부릉');
+        },
+    };
+
+    const bmw = {
+        color: 'red',
+        navigation: 1,
+    };
+
+    const benz = {
+        color: "black",
+    };
+
+    const audi = {
+        color: 'blue',
+    };
+
+    // car를 상속받는다
+    bmw.__proto__ = car;
+    benz.__proto__ = car;
+    audi.__proto__ = car;
+
+    const x5 = {
+        color: 'white',
+        name: 'x5',
+    };
+
+    x5.__proto__ = bmw;
+
+    bmw.drive(); // bmw의 객체에 drive()가 없어서 __proto__ 에서 찾는다.
+    console.log(x5.color); // x5에 이미 color가 있기 때문에 bmw의 color로 가지 않는다.
+
+    // 객체가 가지고 있는 프로퍼티 확인
+    for(i in x5) {
+        if(x5.hasOwnProperty(i)){
+            console.log('o', i);
+        } else {
+            console.log('x', i);
+        }
+    }
+    console.log('================');
+    
+    // ==프로토타입 다른 방법==
+    const Phone = function (type) {
+        this.type = type;
+    }
+    /*
+    Phone.prototype.size = 10;
+    Phone.prototype.call = function() {
+        console.log('따르릉따르릉');
+    };
+    */
+    Phone.prototype = {
+        constructor: Phone, // 이거 안하면 samsung.constructor === Phone가 false로 나옴, 아니면 한번에 프로토타입 말고 위처럼 하나씩 하면 해결됨
+        size : 10,
+        call() {
+            console.log("따르릉따르릉");
+        },
+        stop() {
+            console.log('뚜뚜뚜뚜');
+        },
+        height: 500,
+    };
+
+    const samsung = new Phone("삼성"); // 상속
+    console.log(samsung);
+    console.log(samsung instanceof Phone);
+    console.log(samsung.constructor === Phone);
+
+
+    // 클로저를 이용해서 수정 방지
+    const User = function (name){
+        const n = name;
+        this.getName = function() {
+            console.log(n);
+        };
+    };
+    const woals = new User("재민"); // 이름 수정 불가
+</script>

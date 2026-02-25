@@ -142,4 +142,12 @@
     ["age", 30],
     ];
     console.log(Object.fromEntries(arr));
+    console.log("================================");
+
+
+    // 객체 구조 분해
+    let people = {name: '재민', age: 25};
+    let {name, age, gender = '남자'} = people; // name, age 순서 바꿔도 무관
+    // let {name: jaeminName, age: jaeminAge} = people; 처럼 새로운 변수 이름 가능
+    console.log(name, age, gender);
 </script>

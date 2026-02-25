@@ -73,4 +73,40 @@
     let add3 = (a, b) => (a + b); // 리턴문이 없다면 이렇게 가능, 괄호도 생략 가능
     console.log(add2(2,3)); 
     console.log(add3(3,4)); 
+
+
+    // 인수 전달
+    function showAge(age){
+        console.log('=====start showAge=====');
+        console.log(age);
+        // arguments -> 함수로 넘어 온 모든 인수에 접근, length/index 를 가진 array 형태의 객체 (배열의 내장 메서드는 없음)
+        console.log(arguments.length); 
+        console.log(arguments[0]);
+        console.log(arguments[1]);
+        console.log('=====end showAge=====');
+    }
+    showAge(16, 17); // 이렇게 해도 에러는 발생하지 않는다.
+    showAge(); // undefined
+
+
+    /*
+    나머지 배개변수
+    전달 받은 모든 수를 더해야함
+    배열의 메서드 사용 가능
+    */
+    function add(...num) {
+        let sum=0;
+        num.forEach((i)=>(sum+=i));
+        console.log(sum);
+    }
+    add(1, 2, 3, 4, 5);
+    add(1, 2, 3);
+
+    function User2(name, age, ...skills) { // 이럴 경우 나머지 매개변수는 항상 마지막에 위치
+        this.name = name;
+        this.age = age;
+        this.skills = skills;
+    }
+
+
 </script>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallApplyBind</title>
+</head>
+<body>
+    <h1>hello CallApplyBind!</h1>
+</body>
+</html>
+<script>
+    const woals = {name: '재민',};
+    const alsrud = {name: '민경',};
+
+    function showThisName() {
+        console.log(this.name);
+    }
+    showThisName(); // 해당 함수에서 this는 정적객체 즉, 윈도우를 가리키는데 윈도우의 name은 빈 문자열이라 빈 문자열이 출력된다. -> call을 사용
+
+    // ==call==
+    showThisName.call(woals);
+
+    function update(birth, job) {
+        this.birth = birth;
+        this.job = job;
+    }
+    update.call(woals, 2002, '대학생');
+    console.log(woals);
+
+    
+    // ==apply==
+    // apply는 call과 같지만 매개변수를 배열로 받는다.
+    update.apply(alsrud, [2001, '직장인']);
+    console.log(alsrud);
+    
+
+    // 최대 최소 구하기
+    let arr = [3, 1, 6, 4, 5];
+    const minNum = Math.min.apply(null, arr); // apply 활용
+    const maxNum = Math.max.call(null, ...arr); // call 활용
+    console.log(minNum, maxNum);
+
+
+    // ==bind==
+    const user = {
+        name: "재민",
+        showName: function() {
+            console.log(`hello, ${this.name}`);
+        },
+    };
+    user.showName();
+    let fn = user.showName;
+    fn(); // fn에 할당할때 user의 this를 잃어버려서 이름이 출력이 안된다.
+    fn.call(user); // call, apply를 사용하면 올바르게 출력
+
+    let boundFn = fn.bind(user); // fn의 this가 user의 this를 갖도록 바인드
+    boundFn();
+</script>

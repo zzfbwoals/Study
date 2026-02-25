@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <h1>hello Closure!</h1>
+</body>
+</html>
+<script>
+    function makeCounter() {
+        let num = 0; // 은닉화
+        // 함수가 태어날때 환경을 기억하고 있어서, 함수가 끝난 뒤에도 num 변수를 계속 기억한다.
+        return function () {
+            return num++;
+        };
+    }
+
+    let counter = makeCounter(); // makeCounter() 에서 함수가 리턴되므로 counter 는 이제 함수이다.
+    /*
+    counter = function () {
+    return num++;
+    };
+    위의 모습
+    */
+    console.log(counter()); // 0
+    console.log(counter()); // 1
+    console.log(counter()); // 2
+</script>

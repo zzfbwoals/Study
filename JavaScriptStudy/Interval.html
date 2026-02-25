@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval</title>
+</head>
+<body>
+    <h1>hello Interval!</h1>
+</body>
+</html>
+<script>
+    // 일정 시간이 지난 후 함수를 반복 실행
+    let cnt = 0;
+    function fn(str) {
+        cnt++;
+        console.log(str);
+        if (cnt === 5) {clearInterval(tId);} // 5번 하면 종료
+    }
+    const tId = setInterval(fn, 1000, '1초 경과'); // 3000 = 3s, 3초마다 실행
+</script>

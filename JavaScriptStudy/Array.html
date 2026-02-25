@@ -45,7 +45,7 @@
     ];
 
 
-    // Methods
+    // ==Methods==
      
     // arr.splice(n, m) : 인덱스 n부터 m까지 지움
     // arr.splice(n, m, x) : 인덱스 n부터 m까지 지우고 x를 추가 여러개 가능
@@ -109,6 +109,42 @@
     });
     console.log(arr4);
 
-    //
+    // arr.reduce() : 인수로 함수를 받음 (누적 계산값, 현재값) => { return 계산값 };
+    let arr5 = [1, 2, 3, 4, 5];
+    const result4 = arr5.reduce((prev, cur) => {
+        return prev+cur;
+    }, 0); // 0이 아니라 100이면 100에서 1, 2, 3, 4, 5 더함
+    console.log(result4);
+
+    let result5 = userList.reduce((prev, cur) => {
+        if(cur.gender === "남자") {
+            prev.push(cur.name);
+        }
+        return prev;
+    }, []);
+    console.log(result5); 
+
+
+    // ==배열 구조 분해==
+    let users = ['Mike', 'Tom', 'Jane'];
+    let [user1, user2, user3] = users; // user1 = users[0], user2 = users[1], user3 = users[2]
+
+    let str = "Mike-Tom-Jane";
+    let [user4, user5, user6] = str.split('-');
+
+    let [a,b,c=5] = [1,2]; // 기본값이 없으면 undefined
+    let [user7, , user8] = ['Mike', 'Tom', 'Jane', 'Tony']; // 일부 반환값 무시 mike와 jane만 담긴다.
+
+    // 배열 구조 분해를 사용하면 sawp을 temp 없이 할 수 있따.
+    let x=1, y=2, temp=0;
+    temp=x, x=y, y=temp; // 기존 swap 방식
+    [x, y] = [y, x]; // 배열 구조 분해를 사용한 swap 방식
+
+
+    // ==전개 구문 : 복제==
+    arr = [1, 2, 3];
+    arr2 = [4, 5, 6];
+    let newArr = [...arr, ...arr2, 7, 8, 9];
+    console.log(newArr);
 
 </script>
