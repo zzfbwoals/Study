@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main_04_009",
+            "request": "launch",
+            "mainClass": "Main_04_009",
+            "projectName": "Study_f8e3ae40"
+        },
+        {
+            "type": "java",
             "name": "Main_04_008",
             "request": "launch",
             "mainClass": "Main_04_008",
