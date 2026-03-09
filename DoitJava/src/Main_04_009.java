@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-// DNA 비밀번호 (12891)
+// DNA 비밀번호 (12891) -> 슬라이딩 윈도우 사용
 public class Main_04_009 {
 
     static int acgt[] = new int[4];

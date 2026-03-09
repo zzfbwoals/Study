@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.StringTokenizer;
 
-// 구간 합 구하기 (11659)
+// 구간 합 구하기 (11659) -> 구간 합
 public class Main_04_003 {
     public static void main(String[] args) throws Exception {
         // 수의 개수 N, 합을 구해야 하는 횟수 M 입력

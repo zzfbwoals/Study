@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-// 주몽의 명령 (1940)
+// 주몽의 명령 (1940) -> 투 포인터 사용
 public class Main_04_007 {
     public static void main(String[] args) throws Exception {
         // 재료의 개수 N 입력, 갑옷을 만드는데 필요한 수 M 입력

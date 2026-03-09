@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-// 좋은 수 구하기 (1253)
+// 좋은 수 구하기 (1253) -> 투 포인터 사용
 public class Main_04_008 {
     public static void main(String[] args) throws Exception {
         // 재료의 개수 N 입력, 갑옷을 만드는데 필요한 수 M 입력

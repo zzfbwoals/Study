@@ -1,6 +1,6 @@
 import java.io.*;
 
-// 연속된 자연수의 합 구하기 (2018)
+// 연속된 자연수의 합 구하기 (2018) -> 투 포인터 사용
 public class Main_04_006 {
     public static void main(String[] args) throws Exception {
         // 자연수 N 입력

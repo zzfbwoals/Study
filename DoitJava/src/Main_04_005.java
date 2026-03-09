@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.StringTokenizer;
 
-// 나머지 합 구하기 (10986)
+// 나머지 합 구하기 (10986) -> 구간 합
 public class Main_04_005 {
     public static void main(String[] args) throws Exception {
         //N개의 수의 N 입력, 나눔값 M 입력
