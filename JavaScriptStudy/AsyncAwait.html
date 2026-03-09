@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+    <h1>hello Class!</h1>
+</body>
+</html>
+<script>
+    // async 를 붙이면 항상 프로미스 반환
+    async function getName() {
+        return "Mike";
+    }
+    // 프로미스 처럼 사용 가능
+    getName().catch((err) => {
+        console.log(err);
+    });
+
+    // await는 async 함수 내부에서만 사용 가능
+    async function showName() {
+        const result = await getName("Mike");
+    }
+
+
+    const f1 = (message) => {
+        console.log(message);
+        return new Promise((res, rej) => {
+            setTimeout(() => {
+                rej(new Error("err.."));
+            }, 3000);
+        });
+    };
+    const f2 = (message) => {
+        console.log(message);
+        return new Promise((res, rej) => {
+            setTimeout(() => {
+                res("2번 주문 완료")
+            }, 1000);
+        });
+    };
+    async function order() {
+        try {
+            const result1 = await f1(); // 하나의 묶음이라 여기서 에러뜨고 멈춤 -> 방지하기 위해 try catch 사용
+            const result2 = await f2(result1);
+            console.log(result2);
+            // const result = await Promise.all([f1(), f2()])... 가능
+        } catch (e) {
+            console.log(e);
+        }
+        console.log("종료");
+    }
+</script>

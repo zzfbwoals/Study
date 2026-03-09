@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <h1>hello Promise!</h1>
+</body>
+</html>
+<script>
+    // 전호번호 웨이팅 같은거
+    const pr = new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            resolve('OK')
+            //reject(new Error('err...'));
+        }, 3000)
+    });
+
+    pr.then(
+        function(result){ // 위의 ok가 들어옴
+            console.log(result + ' 가지러 가자.');
+        }
+    ).catch(
+        function(err){
+            console.log('다시 주문해주세요..');
+        }
+    ).finally(
+        function(){
+            console.log('---주문 끝---');
+        }
+    )
+
+    console.time("x");
+    //Promise.race -> 하나라도 완료되면 종료 (경쟁)
+    Promise.all([f1(), f2(), f3()]).then((res)=> {
+        console.log(res);
+        consol.etimeEnd("x");
+    });
+    // 여러개 프로미스 한번에 실행 -> 도중 하나 에러면 다 실패
+</script>

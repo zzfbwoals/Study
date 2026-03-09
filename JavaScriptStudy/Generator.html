@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator</title>
+</head>
+<body>
+    <h1>hello Generator!</h1>
+    iterrable<br>
+    - Symbol.iterator 메서드가 있다<br>
+    - Symbol.iterator는 iterator를 반환해야 한다.<br><br>
+    iterator<br>
+    - next 메서드를 가진다.<br>
+    - next 메서드는 value와 done 속성을 가진 객체를 반환한다.<br>
+    - 작업이 끝나면 done 은 true 가 된다.<br>
+
+</body>
+</html>
+<script>
+    // 함수의 실행을 중간에 멈췄다가 재개할 수 있음
+    function* fn() {
+        try {
+            console.log(1);
+            yield 1;
+            console.log(2);
+            yield 2;
+            console.log(3);
+            yield 3;
+            return "finish";
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+    const a = fn();
+    console.log(a);
+    console.log(a.next()); // -> value:1, done:false
+    console.log(a.return('END')); // value:'END', done:true --> 즉시 종료
+</script>
